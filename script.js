@@ -1,10 +1,9 @@
 var mensaje = null;
+var salida = "";
 
 function encripta(){
-   
-    mensaje= document.getElementsByName("txt_mensaje_ini")[0].value;
+    mensaje = document.getElementsByName("txt_mensaje_ini")[0].value;
     var arr = mensaje.split('');
-    var salida = "";
     arr.forEach(element => {
         switch (element) {
             case "e":
@@ -27,10 +26,26 @@ function encripta(){
         }
        salida = salida + element;
     });
-  
-    console.log(salida);
-
     document.getElementsByName("txt_mensaje_fin")[0].value = salida;
-
 }                
+
+function desencripta(){
+    mensaje = document.getElementsByName("txt_mensaje_ini")[0].value;
+    for (let index = 0; index < mensaje.length; index++) {
+        mensaje = mensaje.replace('ai', 'a');
+        mensaje = mensaje.replace('ober', 'o');
+        mensaje = mensaje.replace('ufat', 'u');
+        mensaje = mensaje.replace('imes', 'i');
+        mensaje = mensaje.replace('enter', 'e');
+    };
+    document.getElementsByName("txt_mensaje_fin")[0].value = mensaje;
+}
+
+function copiar(){
+    
+    mensaje = document.getElementsByName("txt_mensaje_fin")[0].value;
+    navigator.clipboard.writeText(mensaje);
+   
+
+}
 
