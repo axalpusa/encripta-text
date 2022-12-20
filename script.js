@@ -2,7 +2,9 @@ var mensaje = null;
 var salida = "";
 
 function encripta(){
-    mensaje = document.getElementsByName("txt_mensaje_ini")[0].value;
+    salida = "";
+   mensaje = document.getElementById('txt_mensaje_ini').innerText;
+  
     var arr = mensaje.split('');
     arr.forEach(element => {
         switch (element) {
@@ -27,10 +29,15 @@ function encripta(){
        salida = salida + element;
     });
     document.getElementsByName("txt_mensaje_fin")[0].value = salida;
+    limpiar();
+   
+    
 }                
 
 function desencripta(){
-    mensaje = document.getElementsByName("txt_mensaje_ini")[0].value;
+    //mensaje="";
+    mensaje = document.getElementById('txt_mensaje_ini').innerText;
+  
     for (let index = 0; index < mensaje.length; index++) {
         mensaje = mensaje.replace('ai', 'a');
         mensaje = mensaje.replace('ober', 'o');
@@ -39,6 +46,9 @@ function desencripta(){
         mensaje = mensaje.replace('enter', 'e');
     };
     document.getElementsByName("txt_mensaje_fin")[0].value = mensaje;
+    limpiar();
+   
+   
 }
 
 function copiar(){
@@ -46,6 +56,25 @@ function copiar(){
     mensaje = document.getElementsByName("txt_mensaje_fin")[0].value;
     navigator.clipboard.writeText(mensaje);
    
-
+    
 }
-
+function limpiar(){
+    //document.getElementById('txt_mensaje_ini').innerText="";
+   // document.getElementsByName("txt_mensaje_fin")[0].value="";
+   mostrar_ingresar_text()
+}
+function ocultar_ingresar_text(){
+    document.getElementById('txt_mensaje_ini').innerHTML=" ";
+   
+  // document.getElementById('txt_ingresar_text').style.display = 'none';
+   
+                
+    //document.getElementById('txt_ingresar_text').onfocus=null;
+    
+    }
+function mostrar_ingresar_text(){
+    document.getElementById('txt_mensaje_ini').innerHTML="Ingrese el texto aqui...";
+    document.getElementById("txt_muneco").style.display='none';
+    document.getElementById("txt_resultado").style.display='inline';
+   // document.getElementById('txt_ingresar_text').style.display = 'inline';
+    }

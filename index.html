@@ -5,29 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Encripta/Desencripta TEXTO</title>
 </head>
 <body>
-    <div>
-        <form action="" name="frm_encripta" method="get">
-            <textarea name="txt_mensaje_ini" id="txt_mensaje_ini" cols="30" rows="10" placeholder="INGRESAR TEXTO AQUI"></textarea>
-            
-            <p>Solo letras minusculas y sin acentos</p>
-       
-            <input type="button" value="ENCRIPTA" onclick="encripta()">
-            <input type="button" value="DESENCRIPTA" onclick="desencripta()">
 
-        </form>
-       
-    </div>
-    <div>
+    <section>
+        <div id="logo">
+            <img src="images/logo_alura.png" alt="">
+            
+        </div>
+        <div id="padre">
+            <form action="" name="frm_encripta" method="get">
+               
+                <span  role="textbox" contenteditable class="txt_mensaje_ini" name="txt_mensaje_ini" id="txt_mensaje_ini" onclick="ocultar_ingresar_text()">
+                   Ingrese el texto aqui...
+                </span>
+
+                <p>Solo letras minusculas y sin acentos</p>
+           
+                <input type="button" id="btn_encripta" value="ENCRIPTA" onclick="encripta()">
+                <input type="button" value="DESENCRIPTA" onclick="desencripta()">
+    
+            </form>
+        </div>
         
-       
-    </div>
-    <div>
-        <textarea name="txt_mensaje_fin" id="txt_mensaje_fin" cols="30" rows="10"></textarea>
-        <input type="button" value="COPIAR" onclick="copiar()">
-    </div>
+        <div id="hijo">
+            <div id="txt_muneco">
+               <span>
+                <img src="images/muneco.png" alt="" >
+              <h2>  
+                Ningun mensaje fue encripado
+              </h2>  
+              <p>
+                Ingrese el texto que desees encriptar o desencriptar
+              </p>
+               </span> 
+            </div>
+               
+            <div id="txt_resultado">
+                <span class="textarea" role="textbox" contenteditable name="txt_mensaje_ini" id="txt_mensaje_ini"></span>
+                <textarea name="txt_mensaje_fin" id="txt_mensaje_fin" cols="30" rows="10" readonly></textarea>
+                <input type="button" id="btn_copiar" value="COPIAR" onclick="copiar()">
+            </div>
+
+               
+        </div>
+    </section>
+   
+    
+    
 </body>
 <footer>
     <div>
@@ -35,3 +62,4 @@
     </div>
 </footer>
 </html>
+

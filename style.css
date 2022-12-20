@@ -1,0 +1,114 @@
+body{
+    background: #E5E5E5;
+}
+h2,p{
+    text-align: center;
+}
+#logo{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+#txt_mensaje_ini{
+    position: absolute;
+    width: 50%;
+   
+    left: 10%;
+    top: 20%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+
+}
+
+#txt_ingresar_text{
+    display: inline;
+}
+#padre {
+  
+}
+#hijo {
+   
+position: absolute;
+width: 30%;
+height: 90%;
+left: 68%;
+top: 4%;
+
+/* White */
+background: #FFFFFF;
+
+/* shadow */
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+border-radius: 32px;
+
+
+}
+#txt_mensaje_fin{
+    position: absolute;
+    width: 92%;
+    height: 70%;
+    left: 4%;
+    top: 4%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    border: 1px solid #fff;
+border-radius: 24px;
+    resize: none;
+   
+}
+#txt_muneco{
+    object-fit: cover;
+    position: absolute;
+    width: 88%;
+    height: 60%;
+    left: 4%;
+    top: 4%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    border: 1px solid #fff;
+    border-radius: 24px;
+  
+    display: block;
+
+}
+
+#txt_resultado{
+    display: none;
+}
+#btn_copiar{
+
+padding: 24px;
+gap: 8px;
+
+position: absolute;
+width: 92%;
+height: 15%;
+left: 4%;
+top: 78%;
+
+/* Dark blue/dark-blue-300 */
+
+border: 1px solid #0A3871;
+border-radius: 24px;
+
+color: #0A3871;
+font-size: 16px;
+
+
+}
+
+
