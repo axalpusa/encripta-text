@@ -2,6 +2,7 @@ var mensaje = null;
 var salida = "";
 
 function encripta(){
+  
     salida = "";
    mensaje = document.getElementById('txt_mensaje_ini').innerText;
   
@@ -39,7 +40,7 @@ function desencripta(){
     //mensaje="";
     mensaje = document.getElementById('txt_mensaje_ini').innerText;
   
-    for (let index = 0; index < mefrm_encriptansaje.length; index++) {
+    for (let index = 0; index < mensaje.length; index++) {
         mensaje = mensaje.replace('ai', 'a');
         mensaje = mensaje.replace('ober', 'o');
         mensaje = mensaje.replace('ufat', 'u');
