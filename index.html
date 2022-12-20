@@ -10,56 +10,81 @@
 </head>
 <body>
 
-    <section>
-        <div id="logo">
+    <main class="contenedor">
+        <div class="contenedor_logo">
             <img src="images/logo_alura.png" alt="">
-            
         </div>
-        <div id="padre">
-            <form action="" name="frm_encripta" method="get">
-               
-                <span  role="textbox" contenteditable class="txt_mensaje_ini" name="txt_mensaje_ini" id="txt_mensaje_ini" onclick="ocultar_ingresar_text()">
-                   Ingrese el texto aqui...
-                </span>
-
-                <p>Solo letras minusculas y sin acentos</p>
-           
-                <input type="button" id="btn_encripta" value="ENCRIPTA" onclick="encripta()">
-                <input type="button" value="DESENCRIPTA" onclick="desencripta()">
-    
+        <div class="contenedor_formulario">
+            <form action="" method="get">
+                <div class="contenedor_textbox">
+                    <span  role="textbox" contenteditable class="txt_mensaje_ini" name="txt_mensaje_ini" id="txt_mensaje_ini" onclick="ocultar_ingresar_text()">
+                        Ingrese el texto aqui...
+                     </span>
+                </div>
+                <div class="contenedor_min">
+                    <span id="ciruclo">
+                        <img src="images/circulo.png" alt="">
+                    </span>
+                    <p> Solo letras minusculas y sin acentos
+                    </p>
+                </div>
+                <div class="contenedor_botones">
+                 <!--   <input type="button" id="btn_encripta" value="ENCRIPTA" onclick="encripta()">-->
+                    <button id="btn_encripta" onclick="encripta()">
+                        <span id="spn_encripta">
+                            ENCRIPTA
+                        </span>
+                    </button>
+                    <button id="btn_desencripta" onclick="desencripta()">
+                        <span id="spn_desencripta">
+                            DESENCRIPTA
+                        </span>
+                    </button>
+                    <!--<input type="button" id="btn_desencripta"value="DESENCRIPTA" onclick="desencripta()">-->
+                </div>
             </form>
         </div>
-        
-        <div id="hijo">
-            <div id="txt_muneco">
-               <span>
-                <img src="images/muneco.png" alt="" >
-              <h2>  
-                Ningun mensaje fue encripado
-              </h2>  
-              <p>
-                Ingrese el texto que desees encriptar o desencriptar
-              </p>
-               </span> 
+        <div class="contenedor_rectangulo1">
+            <div class="contenedor_sinmensaje" id="contenedor_sinmensaje">
+                <div class="contenedor_muneco">
+                    <img src="images/muneco.png" alt="" >
+                </div>  
+                <div class="contenedor_mensajes">
+                    <div class="mensaje1">
+                        <p>
+                            Ningun mensaje fue encripado
+                        </p>
+                    </div> 
+                    <div class="mensaje2">
+                        <p>
+                            Ingrese el texto que desees encriptar o desencriptar
+                        </p>
+                    </div>
+                    
+                </div>
             </div>
-               
-            <div id="txt_resultado">
-                <span class="textarea" role="textbox" contenteditable name="txt_mensaje_ini" id="txt_mensaje_ini"></span>
-                <textarea name="txt_mensaje_fin" id="txt_mensaje_fin" cols="30" rows="10" readonly></textarea>
-                <input type="button" id="btn_copiar" value="COPIAR" onclick="copiar()">
+            <div class="contenedor_resultado" id="contenedor_resultado">
+                <div class="contenedor_textbox_resultado">
+                    <textarea name="txt_mensaje_fin" id="txt_mensaje_fin" ></textarea>
+                </div>
+                <div class="contenedor_boton_copia">
+                    <button id="btn_copiar" onclick="copiar()">
+                        <span id="spn_desencripta">
+                            COPIAR
+                        </span>
+                    </button>
+                </div>
+                
             </div>
-
-               
+        </div> 
+        <div class="contenedor_rectangulo2">
+            
         </div>
-    </section>
-   
-    
-    
+    </main>
+       
 </body>
 <footer>
-    <div>
-        <p>axalpusa</p>
-    </div>
+
 </footer>
 </html>
 

@@ -29,16 +29,17 @@ function encripta(){
        salida = salida + element;
     });
     document.getElementsByName("txt_mensaje_fin")[0].value = salida;
-    limpiar();
-   
-    
+
+   // limpiar();
+    document.getElementById("contenedor_sinmensaje").style.display='none';
+    document.getElementById("contenedor_resultado").style.display='inline';
 }                
 
 function desencripta(){
     //mensaje="";
     mensaje = document.getElementById('txt_mensaje_ini').innerText;
   
-    for (let index = 0; index < mensaje.length; index++) {
+    for (let index = 0; index < mefrm_encriptansaje.length; index++) {
         mensaje = mensaje.replace('ai', 'a');
         mensaje = mensaje.replace('ober', 'o');
         mensaje = mensaje.replace('ufat', 'u');
@@ -46,7 +47,7 @@ function desencripta(){
         mensaje = mensaje.replace('enter', 'e');
     };
     document.getElementsByName("txt_mensaje_fin")[0].value = mensaje;
-    limpiar();
+    //limpiar();
    
    
 }
@@ -66,15 +67,11 @@ function limpiar(){
 function ocultar_ingresar_text(){
     document.getElementById('txt_mensaje_ini').innerHTML=" ";
    
-  // document.getElementById('txt_ingresar_text').style.display = 'none';
-   
-                
-    //document.getElementById('txt_ingresar_text').onfocus=null;
     
     }
 function mostrar_ingresar_text(){
     document.getElementById('txt_mensaje_ini').innerHTML="Ingrese el texto aqui...";
-    document.getElementById("txt_muneco").style.display='none';
+    document.getElementById("contenedor_sinmensaje").style.display='none';
     document.getElementById("txt_resultado").style.display='inline';
-   // document.getElementById('txt_ingresar_text').style.display = 'inline';
+
     }
